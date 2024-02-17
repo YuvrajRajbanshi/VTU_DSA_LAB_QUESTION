@@ -47,6 +47,8 @@ void read(struct day *calendar)
         // Read the input and store it in the buffer
         scanf("%s", buffer);
         // Allocate memory for the name of the day
+
+        // ask to mam why (strlen(buffer)+1)
         calendar[i].name = (char *)malloc((strlen(buffer) + 1) * sizeof(char));
         // Check if memory allocation is successful
         if (calendar[i].name == NULL)
