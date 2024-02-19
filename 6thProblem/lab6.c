@@ -94,9 +94,12 @@ bool fnQueueEmpty(int f, int r)
 }
 void fnInsertRear(char queue[], int *f, int *r, char cVal)
 {
+
+    // why *f = *f +1
     if (*r == -1)
     {
         *f = *f + 1;
+
         *r = *r + 1;
     }
     else

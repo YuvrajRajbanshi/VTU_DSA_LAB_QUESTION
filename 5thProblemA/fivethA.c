@@ -17,8 +17,7 @@ int main()
     scanf("%s", acExpr);
     for (i = 0; i < strlen(acExpr); i++)
     {
-        cSymb = acExpr[i];
-        if (isdigit(cSymb))
+        cSymb = acExpr[i] if (isdigit(cSymb))
         {
             fnPush(iaStack, &top, cSymb - '0');
         }
