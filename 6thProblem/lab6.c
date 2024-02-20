@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#define QUEUE_SIZE 5
+#define QUEUE_SIZE 100
 void fnInsertRear(char[], int *, int *, char);
 char fnDeleteFront(char[], int *, int *);
 void fnDisplay(char[], int, int);
@@ -96,6 +96,7 @@ void fnInsertRear(char queue[], int *f, int *r, char cVal)
 {
 
     // why *f = *f +1
+    // this condition says that the circular queues is empty
     if (*r == -1)
     {
         *f = *f + 1;
@@ -103,7 +104,9 @@ void fnInsertRear(char queue[], int *f, int *r, char cVal)
         *r = *r + 1;
     }
     else
+    {
         *r = (*r + 1) % QUEUE_SIZE;
+    }
 
     queue[*r] = cVal;
 }
@@ -112,6 +115,8 @@ char fnDeleteFront(char queue[], int *f, int *r)
     char cElem;
     cElem = queue[*f];
 
+    // this if condition stands for if queues has only one element
+    // still we want to delete the element
     if (*f == *r)
     {
         *f = -1;

@@ -20,6 +20,8 @@ struct day
 };
 
 // Define a function to create a calendar as an array of 7 days
+
+// why this create() is a pointer function ask to mam
 struct day *create()
 {
     // Allocate memory for 7 days
