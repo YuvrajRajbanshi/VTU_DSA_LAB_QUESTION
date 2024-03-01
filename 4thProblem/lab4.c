@@ -10,7 +10,7 @@ operands.
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
-#define STK_SIZE 10
+// #define STK_SIZE 10
 
 void fnPush(char[], int *, char);
 char fnPop(char[], int *);
@@ -22,10 +22,13 @@ int main()
     int top = -1;
     printf("\nEnter a valid infix expression\n");
     scanf("%s", acExpr);
+    // why # used in fnPush calling,
+    // the answer is for our convient
     fnPush(acStack, &top, '#');
     for (i = 0; acExpr[i] != '\0'; ++i)
     {
         cSymb = acExpr[i];
+        // is alphanumeric
         if (isalnum(cSymb))
         {
             acPost[j++] = cSymb;
@@ -43,6 +46,9 @@ int main()
             fnPop(acStack, &top);
         }
         else
+        // this section baiscally has to do calcuation(sorry if i told wrong)
+
+        // ask to mam about this condition
         {
             while (fnPrecd(acStack[top]) >= fnPrecd(cSymb))
             {

@@ -6,8 +6,10 @@
 #include <math.h>
 #include <ctype.h>
 #define STK_SIZE 10
+
 void fnPush(int[], int *, int);
 int fnPop(int[], int *);
+
 int main()
 {
     int iaStack[50], i, iOp1, iOp2, iRes;
@@ -20,6 +22,7 @@ int main()
         cSymb = acExpr[i];
         if (isdigit(cSymb))
         {
+            // ask to mam about this function call
             fnPush(iaStack, &top, cSymb - '0');
         }
         else

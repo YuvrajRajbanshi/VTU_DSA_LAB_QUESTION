@@ -19,13 +19,18 @@ struct day
     char *activity; // Activity for the day
 };
 
+typedef struct day hello;
+
 // Define a function to create a calendar as an array of 7 days
 
 // why this create() is a pointer function ask to mam
-struct day *create()
+// struct day *create()
+
+hello *create()
 {
     // Allocate memory for 7 days
-    struct day *calendar = (struct day *)malloc(7 * sizeof(struct day));
+    // struct day *calendar = (struct day *)malloc(7 * sizeof(struct day));
+    hello *calendar = (struct day *)malloc(7 * sizeof(struct day));
     // Check if memory allocation is successful
     if (calendar == NULL)
     {

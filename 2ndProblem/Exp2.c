@@ -46,3 +46,8 @@ void main()
     else
         printf("\n Pat not found in main string");
 }
+
+// Enter the main string: hello world
+// Enter the pattern string:
+// Enter the replacement string: coding
+// Resultant string is hello world
