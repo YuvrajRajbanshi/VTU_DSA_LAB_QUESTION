@@ -98,6 +98,8 @@ void fnFreeNode(NODEPTR x)
     free(x);
 }
 // in this function we are passing first as head of the Linked list "cool yaar"
+
+// insert mean end of the sll it will add one node
 NODEPTR fnInsRear(NODEPTR first)
 {
     NODEPTR temp, cur;
@@ -182,6 +184,8 @@ NODEPTR fnDelRear(NODEPTR first)
         prev = cur;
         cur = cur->link;
     }
+
+    // here cur->link point to the null
     prev->link = cur->link;
     printf("\nNode deleted for %s\n", cur->cName);
     fnFreeNode(cur);
