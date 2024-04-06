@@ -28,6 +28,8 @@ POLYPTR fnInsertTerm(POLYPTR poly, int coef, int pow_x, int pow_y, int pow_z)
     {
         cur = cur->next;
     }
+    // this condtion for circular
+
     cur->next = newNode;
     newNode->next = poly;
     return poly;
@@ -54,6 +56,8 @@ void fnDispPolynomial(POLYPTR poly)
 int fnEvaluatePolynomial(POLYPTR poly, int x, int y, int z)
 {
     int result = 0;
+
+    // this is check the if the polynomial is empty
     if (poly->next == poly)
     {
         return result;
@@ -121,6 +125,8 @@ int main()
     POLYPTR polySum = (POLYPTR)malloc(sizeof(struct PolyTerm));
     polySum->next = polySum;
     // Represent and evaluate the polynomial P(x, y, z) = 6x^2y^2z - 4yz^5 + 3x^3yz + 2xy^5z - 2xyz^3
+
+    // POLYPTR fnInsertTerm(POLYPTR poly, int coef, int pow_x, int pow_y, int pow_z)
     poly1 = fnInsertTerm(poly1, 6, 2, 2, 1);
     poly1 = fnInsertTerm(poly1, 4, 0, 1, 5);
     poly1 = fnInsertTerm(poly1, 3, 3, 1, 1);

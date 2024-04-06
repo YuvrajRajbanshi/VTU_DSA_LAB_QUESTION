@@ -48,7 +48,7 @@ int main()
     }
     for (;;)
     {
-        printf("\nQUEUE OPERATIONSn");
+        printf("\nQUEUE OPERATIONS\\n");
         printf("====================");
         printf("\n1.Insert Front\n2.Insert Rear\n3.Delete Front\n4.Delete  Rear\n5.Display\n6.Exit\n");
         printf("\nEnter your choice\n");

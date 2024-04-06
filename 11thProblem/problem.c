@@ -5,7 +5,6 @@
 //         method
 
 #include <stdio.h>
-#include <stdio.h>
 
 const int MAX = 100;
 const int SIZE = 10;
